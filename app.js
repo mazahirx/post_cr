@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const userSchema = require("./models/user");
+const userSchema = require("./modals/user");
 const app = express();
 
 app.set("view engine","ejs");
@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname,'public')));
 
 
 app.get("/",(req,res) =>{
-    res.send("Hello");
+    res.render("index");
 });
 
 app.listen(3000);
